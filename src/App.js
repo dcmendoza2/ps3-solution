@@ -6,6 +6,7 @@ import Item2 from "./components/Item2/Item2";
 import Item3 from "./components/Item3/Item3";
 import Item4 from "./components/Item4/Item4";
 import Item5 from "./components/Item5/Item5";
+import ODESolver from "./components/ODESolvers/ODESolver";
 import Dataset from "./components/Dataset";
 import "katex/dist/katex.min.css";
 
@@ -30,10 +31,16 @@ function App() {
         <Button onClick={() => setShowDataset(!showDataset)}>
           {showDataset ? "Hide" : "Show"} Dataset
         </Button>
-        <Button className="mx-2" onClick={()=> studentNoDispatch({type: 'clear-student-no'})}>Clear Student No.</Button>
+        <Button
+          className="mx-2"
+          onClick={() => studentNoDispatch({ type: "clear-student-no" })}
+        >
+          Clear Student No.
+        </Button>
         <StudentNoInput />
         {showDataset && <Dataset></Dataset>}
         <Col>
+          PS3A:
           <Item1></Item1>
           <Row className="my-3"></Row>
           <Item2></Item2>
@@ -43,7 +50,10 @@ function App() {
           <Item4></Item4>
           <Row className="my-3"></Row>
           <Item5></Item5>
+          <Row className="my-3"></Row>
         </Col>
+        PS3B:
+        <ODESolver></ODESolver>
       </div>
     </StudentNoContext.Provider>
   );
