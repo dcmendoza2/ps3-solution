@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { Card } from "react-bootstrap";
 
 import { StudentNoContext } from "../../contexts/StudentNo";
+import { InlineMath } from "react-katex";
 
 import Item1A from "./Item1A";
 import Item1B from "./Item1B";
@@ -42,14 +43,9 @@ export default function Item1() {
         />
         <Card.Title>
           c) Compute the error for your interpolation for each interpolant if{" "}
-          <img
-            src="https://bit.ly/3GCmTSG"
-            align="center"
-            border="0"
-            alt="f(x) =  \sqrt{e^{-x^{2}} + 2x + 3} -  \sqrt[x]{e^{-x^{2}} + 2x -3}   "
-            width="331"
-            height="29"
-          />
+          <InlineMath
+            math={"f(x) =\\sqrt{e^{-x^2}+2x+3} - \\sqrt[x]{e^{-x^2}+2x-3}"}
+          ></InlineMath>
         </Card.Title>
         <Item1C
           toInterpolate={

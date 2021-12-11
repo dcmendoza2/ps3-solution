@@ -78,8 +78,8 @@ export default function Item1A(props) {
               showlegend: false,
             },
             {
-              x: xQuad, //DATA.map((data) => data[0]),
-              y: yQuad, //DATA.map((data) => data[1]),
+              x: xQuad,
+              y: yQuad,
               type: "scatter",
               line: { shape: "spline", dash: "longdash" },
               mode: "lines",

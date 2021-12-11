@@ -1,5 +1,8 @@
 import React, { useContext } from "react";
 import { Card } from "react-bootstrap";
+
+import InterpolantTemplate from "./InterpolantTemplate";
+
 import { StudentNoContext } from "../../contexts/StudentNo";
 
 export default function Item2() {
@@ -10,8 +13,32 @@ export default function Item2() {
       <Card.Header>#2</Card.Header>
       <Card.Body>
         <Card.Title>h = 0.05</Card.Title>
+        <InterpolantTemplate
+          step={0.05}
+          toInterpolate={
+            studentNoState.studentNo !== ""
+              ? parseFloat("9." + studentNoState.studentNo.substring(4, 9))
+              : null
+          }
+        />
         <Card.Title>h = 0.025</Card.Title>
+        <InterpolantTemplate
+          step={0.025}
+          toInterpolate={
+            studentNoState.studentNo !== ""
+              ? parseFloat("9." + studentNoState.studentNo.substring(4, 9))
+              : null
+          }
+        />
         <Card.Title>h = 0.0125</Card.Title>
+        <InterpolantTemplate
+          step={0.0125}
+          toInterpolate={
+            studentNoState.studentNo !== ""
+              ? parseFloat("9." + studentNoState.studentNo.substring(4, 9))
+              : null
+          }
+        />
       </Card.Body>
     </Card>
   );

@@ -7,6 +7,7 @@ import Item3 from "./components/Item3/Item3";
 import Item4 from "./components/Item4/Item4";
 import Item5 from "./components/Item5/Item5";
 import Dataset from "./components/Dataset";
+import "katex/dist/katex.min.css";
 
 import { StudentNoContext } from "./contexts/StudentNo";
 
@@ -14,7 +15,7 @@ import { studentNoReducer } from "./reducers/studentNoReducer";
 
 import { useReducer, useState } from "react";
 
-import { Col, Button } from "react-bootstrap";
+import { Col, Button, Row } from "react-bootstrap";
 
 function App() {
   const [studentNoState, studentNoDispatch] = useReducer(studentNoReducer, {
@@ -29,13 +30,18 @@ function App() {
         <Button onClick={() => setShowDataset(!showDataset)}>
           {showDataset ? "Hide" : "Show"} Dataset
         </Button>
+        <Button className="mx-2" onClick={()=> studentNoDispatch({type: 'clear-student-no'})}>Clear Student No.</Button>
         <StudentNoInput />
         {showDataset && <Dataset></Dataset>}
         <Col>
           <Item1></Item1>
+          <Row className="my-3"></Row>
           <Item2></Item2>
+          <Row className="my-3"></Row>
           <Item3></Item3>
+          <Row className="my-3"></Row>
           <Item4></Item4>
+          <Row className="my-3"></Row>
           <Item5></Item5>
         </Col>
       </div>

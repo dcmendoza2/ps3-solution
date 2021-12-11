@@ -35,6 +35,9 @@ export default function Item1C(props) {
     <div>
       {props.toInterpolate && (
         <ul>
+          <strong>
+            f({props.toInterpolate}) = {FUNC(props.toInterpolate).toFixed(6)}
+          </strong>
           <li>
             PCLE: | F({props.toInterpolate}) - f({props.toInterpolate}) | =
             {" |"}
@@ -42,7 +45,7 @@ export default function Item1C(props) {
             {FUNC(props.toInterpolate).toFixed(6)}| =
             <strong>
               {" "}
-              {Math.abs(DATA[0][1] - FUNC(props.toInterpolate)).toFixed(6)}
+              {Math.abs(DATA[0][1] - FUNC(props.toInterpolate)).toFixed(12)}
             </strong>
           </li>
           <li>
@@ -55,7 +58,7 @@ export default function Item1C(props) {
               {" "}
               {Math.abs(
                 linear(props.toInterpolate) - FUNC(props.toInterpolate)
-              ).toFixed(6)}
+              ).toFixed(12)}
             </strong>
           </li>
           <li>
@@ -69,7 +72,7 @@ export default function Item1C(props) {
               {" "}
               {Math.abs(
                 quadratic(props.toInterpolate) - FUNC(props.toInterpolate)
-              ).toFixed(6)}
+              ).toFixed(12)}
             </strong>
           </li>
         </ul>

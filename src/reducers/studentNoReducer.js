@@ -10,6 +10,9 @@ const studentNoReducer = (state, action) => {
     case "update-student-no":
       obj = action.payload;
       break;
+    case "clear-student-no":
+      obj.studentNo = "";
+      break;
     default:
       return;
   }
