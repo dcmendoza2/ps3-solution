@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ps3-solution/static/css/main.ea1455b2.chunk.css",
-    "main.js": "/ps3-solution/static/js/main.1c234b4c.chunk.js",
-    "main.js.map": "/ps3-solution/static/js/main.1c234b4c.chunk.js.map",
+    "main.js": "/ps3-solution/static/js/main.011d4bf2.chunk.js",
+    "main.js.map": "/ps3-solution/static/js/main.011d4bf2.chunk.js.map",
     "runtime-main.js": "/ps3-solution/static/js/runtime-main.9e54352b.js",
     "runtime-main.js.map": "/ps3-solution/static/js/runtime-main.9e54352b.js.map",
     "static/css/2.c379f5a3.chunk.css": "/ps3-solution/static/css/2.c379f5a3.chunk.css",
@@ -19,6 +19,6 @@
     "static/css/2.c379f5a3.chunk.css",
     "static/js/2.654b6970.chunk.js",
     "static/css/main.ea1455b2.chunk.css",
-    "static/js/main.1c234b4c.chunk.js"
+    "static/js/main.011d4bf2.chunk.js"
   ]
 }
