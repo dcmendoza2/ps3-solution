@@ -47,7 +47,7 @@ export default function InterpolantTemplate(props) {
       {props.toInterpolate && (
         <Container>
           <Plot
-            config={{ displayModeBar: false }}
+            config={{ displayModeBar: false, scrollZoom: false, staticPlot: true }}
             layout={{
               shapes: [
                 {

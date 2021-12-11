@@ -29,7 +29,7 @@ export default function Item1A(props) {
     <>
       {props.toInterpolate && (
         <Plot
-          config={{ displayModeBar: false }}
+          config={{ displayModeBar: false, scrollZoom: false, staticPlot: true }}
           data={[
             {
               x: DATA.map((data) => data[0]),
