@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ps3a-solution/static/css/main.ea1455b2.chunk.css",
+    "main.js": "/ps3a-solution/static/js/main.fa6af780.chunk.js",
+    "main.js.map": "/ps3a-solution/static/js/main.fa6af780.chunk.js.map",
+    "runtime-main.js": "/ps3a-solution/static/js/runtime-main.1809c7dd.js",
+    "runtime-main.js.map": "/ps3a-solution/static/js/runtime-main.1809c7dd.js.map",
+    "static/css/2.4659568d.chunk.css": "/ps3a-solution/static/css/2.4659568d.chunk.css",
+    "static/js/2.8cf3cc87.chunk.js": "/ps3a-solution/static/js/2.8cf3cc87.chunk.js",
+    "static/js/2.8cf3cc87.chunk.js.map": "/ps3a-solution/static/js/2.8cf3cc87.chunk.js.map",
+    "index.html": "/ps3a-solution/index.html",
+    "static/css/2.4659568d.chunk.css.map": "/ps3a-solution/static/css/2.4659568d.chunk.css.map",
+    "static/css/main.ea1455b2.chunk.css.map": "/ps3a-solution/static/css/main.ea1455b2.chunk.css.map",
+    "static/js/2.8cf3cc87.chunk.js.LICENSE.txt": "/ps3a-solution/static/js/2.8cf3cc87.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1809c7dd.js",
+    "static/css/2.4659568d.chunk.css",
+    "static/js/2.8cf3cc87.chunk.js",
+    "static/css/main.ea1455b2.chunk.css",
+    "static/js/main.fa6af780.chunk.js"
+  ]
+}
