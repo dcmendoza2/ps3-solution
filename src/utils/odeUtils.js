@@ -22,7 +22,7 @@ const eulerMethod = ({ dy, h, bounds: [a, b], y_a }) => {
   }
   y[0] = y_a;
   for (let j = 0; j < t.length - 1; j++) {
-    y[j + 1] = y[j] + dy(y[j], t[j]) * Math.abs(t[j] - t[j + 1]);
+    y[j + 1] = y[j] + dy(y[j], t[j]) * h;
   }
   return [y, t];
 };
@@ -36,8 +36,8 @@ const rk4Method = ({ dy, h, bounds: [a, b], y_a }) => {
   y[0] = y_a;
   for (let j = 0; j < t.length - 1; j++) {
     let k1 = h * dy(y[j], t[j]);
-    let k2 = h * dy(y[j] - k1 / 2.0, t[j] + h / 2.0);
-    let k3 = h * dy(y[j] - k2 / 2.0, t[j] + h / 2.0);
+    let k2 = h * dy(y[j] + k1 / 2.0, t[j] + h / 2.0);
+    let k3 = h * dy(y[j] + k2 / 2.0, t[j] + h / 2.0);
     let k4 = h * dy(y[j] + k3, t[j] + h);
     y[j + 1] = y[j] + k1 / 6.0 + k2 / 3.0 + k3 / 3.0 + k4 / 6.0;
   }
