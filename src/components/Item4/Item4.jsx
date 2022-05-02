@@ -7,7 +7,7 @@ import { FUNC, DATASET_SECOND_DERIVATIVE } from "../../utils/dataset";
 
 export default function Item4() {
   const studentNoState = useContext(StudentNoContext).studentNoState;
-  const point = parseFloat("9" + studentNoState.studentNo.substring(4, 5)) / 10;
+  const point = parseFloat("6" + studentNoState.studentNo.substring(4, 5)) / 10;
 
   return (
     <Card>
@@ -16,8 +16,8 @@ export default function Item4() {
         <InlineMath
           math={`f''(${
             studentNoState.studentNo !== ""
-              ? parseFloat("9." + studentNoState.studentNo.substring(4, 5))
-              : "9.\\alpha"
+              ? parseFloat("6." + studentNoState.studentNo.substring(4, 5))
+              : "6.\\alpha"
           })`}
         ></InlineMath>
       </Card.Header>
@@ -39,7 +39,7 @@ export default function Item4() {
             </tr>
           </thead>
           <tbody>
-            {[0.1, 0.05, 0.025, 0.0125].map((step) => (
+            {[0.1, 0.05, 0.025].map((step) => (
               <tr key={`central-diff-${step}`}>
                 <td>{step}</td>
                 <td>
@@ -57,7 +57,7 @@ export default function Item4() {
                   )}
                   {studentNoState.studentNo === "" && (
                     <InlineMath
-                      math={`f''(9.\\alpha) =\\frac{f(9.\\alpha + ${step}) - 2f(9.\\alpha) + f(9.\\alpha - ${step})}{${step}^2}`}
+                      math={`f''(6.\\alpha) =\\frac{f(6.\\alpha + ${step}) - 2f(6.\\alpha) + f(6.\\alpha - ${step})}{${step}^2}`}
                     />
                   )}
                 </td>
@@ -75,7 +75,7 @@ export default function Item4() {
                   )}
                   {studentNoState.studentNo === "" && (
                     <InlineMath
-                      math={`|f_a''(9.\\alpha) - f''(9.\\alpha)| = | f_a''(9.\\alpha) - \\frac{f(9.\\alpha + ${step}) - 2f(9.\\alpha) + f(9.\\alpha - ${step})}{${step}^2}|`}
+                      math={`|f_a''(6.\\alpha) - f''(6.\\alpha)| = | f_a''(6.\\alpha) - \\frac{f(6.\\alpha + ${step}) - 2f(6.\\alpha) + f(6.\\alpha - ${step})}{${step}^2}|`}
                     />
                   )}
                 </td>

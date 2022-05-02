@@ -13,15 +13,15 @@ export default function Item5() {
   const studentNoState = useContext(StudentNoContext).studentNoState;
   const lower =
     studentNoState.studentNo !== ""
-      ? parseFloat("9." + studentNoState.studentNo.substring(4, 5))
-      : "9.\\alpha";
+      ? parseFloat("6." + studentNoState.studentNo.substring(4, 5))
+      : "6.\\alpha";
   const higher =
     studentNoState.studentNo !== ""
       ? parseFloat(
-          parseFloat("9." + studentNoState.studentNo.substring(4, 5)) + 0.2
+          parseFloat("6." + studentNoState.studentNo.substring(4, 5)) + 0.2
         ).toFixed(1)
-      : "9.\\alpha + 0.2";
-  const point = parseFloat("9" + studentNoState.studentNo.substring(4, 5)) / 10;
+      : "6.\\alpha + 0.2";
+  const point = parseFloat("6" + studentNoState.studentNo.substring(4, 5)) / 10;
 
   return (
     <Card>
@@ -44,7 +44,7 @@ export default function Item5() {
             </tr>
           </thead>
           <tbody>
-            {[0.1, 0.05, 0.025, 0.0125].map((step) => (
+            {[0.1, 0.05, 0.025].map((step) => (
               <tr key={`rectangle-rule-${step}`}>
                 <td>{step}</td>
                 <td>
@@ -78,7 +78,7 @@ export default function Item5() {
             </tr>
           </thead>
           <tbody>
-            {[0.1, 0.05, 0.025, 0.0125].map((step) => (
+            {[0.1, 0.05, 0.025].map((step) => (
               <tr key={`trapezoid-rule-${step}`}>
                 <td>{step}</td>
                 <td>
@@ -117,7 +117,7 @@ export default function Item5() {
             </tr>
           </thead>
           <tbody>
-            {[0.1, 0.05, 0.025, 0.0125].map((step) => (
+            {[0.1, 0.05, 0.025].map((step) => (
               <tr key={`error-int-${step}`}>
                 <td>{step}</td>
                 <td>

@@ -22,12 +22,12 @@ export default function Item1() {
         <Item1A
           toInterpolate={
             studentNoState.studentNo !== ""
-              ? parseFloat("9." + studentNoState.studentNo.substring(4, 9))
+              ? parseFloat("6." + studentNoState.studentNo.substring(4, 9))
               : null
           }
         />
         <Card.Title>
-          b) Approximate 𝑓(9.
+          b) Approximate 𝑓(6.
           {studentNoState.studentNo !== ""
             ? studentNoState.studentNo.substring(4, 9)
             : "𝛼𝛽𝛾𝛿𝜖"}
@@ -37,7 +37,7 @@ export default function Item1() {
         <Item1B
           toInterpolate={
             studentNoState.studentNo !== ""
-              ? parseFloat("9." + studentNoState.studentNo.substring(4, 9))
+              ? parseFloat("6." + studentNoState.studentNo.substring(4, 9))
               : null
           }
         />
@@ -50,7 +50,7 @@ export default function Item1() {
         <Item1C
           toInterpolate={
             studentNoState.studentNo !== ""
-              ? parseFloat("9." + studentNoState.studentNo.substring(4, 9))
+              ? parseFloat("6." + studentNoState.studentNo.substring(4, 9))
               : null
           }
         />

@@ -17,7 +17,7 @@ export default function Item2() {
           step={0.05}
           toInterpolate={
             studentNoState.studentNo !== ""
-              ? parseFloat("9." + studentNoState.studentNo.substring(4, 9))
+              ? parseFloat("6." + studentNoState.studentNo.substring(4, 9))
               : null
           }
         />
@@ -26,16 +26,7 @@ export default function Item2() {
           step={0.025}
           toInterpolate={
             studentNoState.studentNo !== ""
-              ? parseFloat("9." + studentNoState.studentNo.substring(4, 9))
-              : null
-          }
-        />
-        <Card.Title>h = 0.0125</Card.Title>
-        <InterpolantTemplate
-          step={0.0125}
-          toInterpolate={
-            studentNoState.studentNo !== ""
-              ? parseFloat("9." + studentNoState.studentNo.substring(4, 9))
+              ? parseFloat("6." + studentNoState.studentNo.substring(4, 9))
               : null
           }
         />

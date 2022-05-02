@@ -7,13 +7,13 @@ import { InlineMath } from "react-katex";
 
 export default function Item3() {
   const studentNoState = useContext(StudentNoContext).studentNoState;
-  const point = parseFloat("9" + studentNoState.studentNo.substring(4, 5)) / 10;
+  const point = parseFloat("6" + studentNoState.studentNo.substring(4, 5)) / 10;
   return (
     <Card>
       <Card.Header>
         #3
         <InlineMath
-          math={`f'(${studentNoState.studentNo !== "" ? point : "9.\\alpha"})`}
+          math={`f'(${studentNoState.studentNo !== "" ? point : "6.\\alpha"})`}
         ></InlineMath>
       </Card.Header>
       <Card.Body>
@@ -26,7 +26,7 @@ export default function Item3() {
             </tr>
           </thead>
           <tbody>
-            {[0.1, 0.05, 0.025, 0.0125].map((step) => (
+            {[0.1, 0.05, 0.025].map((step) => (
               <tr key={`forward-diff-${step}`}>
                 <td>{step}</td>
                 <td>
@@ -42,7 +42,7 @@ export default function Item3() {
                   )}
                   {studentNoState.studentNo === "" && (
                     <InlineMath
-                      math={`f'(9.\\alpha) =\\frac{f(9.\\alpha + 0.1) - f(9.\\alpha)}{0.1}`}
+                      math={`f'(6.\\alpha) =\\frac{f(6.\\alpha + 0.1) - f(6.\\alpha)}{0.1}`}
                     />
                   )}
                 </td>
@@ -59,7 +59,7 @@ export default function Item3() {
             </tr>
           </thead>
           <tbody>
-            {[0.1, 0.05, 0.025, 0.0125].map((step) => (
+            {[0.1, 0.05, 0.025].map((step) => (
               <tr key={`backward-diff-${step}`}>
                 <td>{step}</td>
                 <td>
@@ -75,7 +75,7 @@ export default function Item3() {
                   )}
                   {studentNoState.studentNo === "" && (
                     <InlineMath
-                      math={`f'(9.\\alpha) =\\frac{f(9.\\alpha) - f(9.\\alpha - ${step})}{${step}}`}
+                      math={`f'(6.\\alpha) =\\frac{f(6.\\alpha) - f(6.\\alpha - ${step})}{${step}}`}
                     />
                   )}
                 </td>
@@ -92,7 +92,7 @@ export default function Item3() {
             </tr>
           </thead>
           <tbody>
-            {[0.1, 0.05, 0.025, 0.0125].map((step) => (
+            {[0.1, 0.05, 0.025].map((step) => (
               <tr key={`central-diff-${step}`}>
                 <td>{step}</td>
                 <td>
@@ -108,7 +108,7 @@ export default function Item3() {
                   )}
                   {studentNoState.studentNo === "" && (
                     <InlineMath
-                      math={`f'(9.\\alpha) =\\frac{f(9.\\alpha + ${step}) - f(9.\\alpha - ${step})}{${
+                      math={`f'(6.\\alpha) =\\frac{f(6.\\alpha + ${step}) - f(6.\\alpha - ${step})}{${
                         2 * step
                       }}`}
                     />
@@ -134,7 +134,7 @@ export default function Item3() {
             </tr>
           </thead>
           <tbody>
-            {[0.1, 0.05, 0.025, 0.0125].map((step) => (
+            {[0.1, 0.05, 0.025].map((step) => (
               <tr key={`error-diff-${step}`}>
                 <td>{step}</td>
                 <td>
@@ -148,7 +148,7 @@ export default function Item3() {
                   )}
                   {studentNoState.studentNo === "" && (
                     <InlineMath
-                      math={`|f_a'(9.\\alpha) - f'(9.\\alpha)| = |f_a'(9.\\alpha) - \\frac{f(9.\\alpha + ${step}) - f(9.\\alpha)}{${step}}|`}
+                      math={`|f_a'(6.\\alpha) - f'(6.\\alpha)| = |f_a'(6.\\alpha) - \\frac{f(6.\\alpha + ${step}) - f(6.\\alpha)}{${step}}|`}
                     />
                   )}
                 </td>
@@ -163,7 +163,7 @@ export default function Item3() {
                   )}
                   {studentNoState.studentNo === "" && (
                     <InlineMath
-                      math={`|f_a'(9.\\alpha) - f'(9.\\alpha)| = |f_a'(9.\\alpha) - \\frac{f(9.\\alpha) - f(9.\\alpha - ${step})}{${step}}|`}
+                      math={`|f_a'(6.\\alpha) - f'(6.\\alpha)| = |f_a'(6.\\alpha) - \\frac{f(6.\\alpha) - f(6.\\alpha - ${step})}{${step}}|`}
                     />
                   )}
                 </td>
@@ -178,7 +178,7 @@ export default function Item3() {
                   )}
                   {studentNoState.studentNo === "" && (
                     <InlineMath
-                      math={`|f_a'(9.\\alpha) - f'(9.\\alpha)| = |f_a'(9.\\alpha) - \\frac{f(9.\\alpha + ${step}) - f(9.\\alpha - ${step})}{${
+                      math={`|f_a'(6.\\alpha) - f'(6.\\alpha)| = |f_a'(6.\\alpha) - \\frac{f(6.\\alpha + ${step}) - f(6.\\alpha - ${step})}{${
                         2 * step
                       }}|`}
                     />
