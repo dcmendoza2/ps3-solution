@@ -44,7 +44,7 @@ export default function Item1() {
         <Card.Title>
           c) Compute the error for your interpolation for each interpolant if{" "}
           <InlineMath
-            math={"f(x) =\\sqrt{e^{-x^2}+2x+3} - \\sqrt[x]{e^{-x^2}+2x-3}"}
+            math={"f(x) = x^{2} + x^{3}cos(x) - sin(x) + xsin(x^{2})"}
           ></InlineMath>
         </Card.Title>
         <Item1C
