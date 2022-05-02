@@ -47,7 +47,7 @@ export default function Item4() {
                     <InlineMath
                       math={`f''(${point})= \\frac{f(${(point + step).toFixed(
                         4
-                      )}) - f(${(point - step).toFixed(4)})}{${2 * step}}= ${(
+                      )}) - 2f(${point.toFixed(4)}) + f(${(point - step).toFixed(4)})}{${step}^{2}}= ${(
                         (FUNC(point + step) -
                           2 * FUNC(point) +
                           FUNC(point - step)) /
