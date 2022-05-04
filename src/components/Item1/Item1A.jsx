@@ -6,20 +6,22 @@ import { DATASET, quadInterpolant } from "../../utils/dataset";
 export default function Item1A(props) {
   const midpoint = parseFloat(Math.trunc(props.toInterpolate * 10) / 10);
   const midpointIndex = DATASET.findIndex((element) => element[0] === midpoint);
+  const mod3 = midpointIndex % 3;
   const DATA = DATASET.slice(midpointIndex, midpointIndex + 3);
+  const DATA1 = DATASET.slice(midpointIndex - mod3, midpointIndex + (3 - mod3));
   let xQuad = [];
   let yQuad = [];
   if (DATA?.length !== 0) {
     const quadratic = quadInterpolant({
-      x0: DATA[0][0],
-      x1: DATA[1][0],
-      x2: DATA[2][0],
-      y0: DATA[0][1],
-      y1: DATA[1][1],
-      y2: DATA[2][1],
+      x0: DATA1[0][0],
+      x1: DATA1[1][0],
+      x2: DATA1[2][0],
+      y0: DATA1[0][1],
+      y1: DATA1[1][1],
+      y2: DATA1[2][1],
     });
     for (let i = 0; i < 100; i++) {
-      let x = DATA[0][0] + (i * (DATA[2][0] - DATA[0][0])) / 100.0;
+      let x = DATA1[0][0] + (i * (DATA1[2][0] - DATA1[0][0])) / 100.0;
       xQuad.push(x);
       yQuad.push(quadratic(x.toFixed(6)));
     }

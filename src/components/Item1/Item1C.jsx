@@ -9,17 +9,19 @@ import {
 export default function Item1C(props) {
   const midpoint = parseFloat(Math.trunc(props.toInterpolate * 10) / 10);
   const midpointIndex = DATASET.findIndex((element) => element[0] === midpoint);
-  const DATA = DATASET.slice(midpointIndex, midpointIndex + 3);
+  const mod3 = midpointIndex % 3;
+  const DATA = DATASET.slice(midpointIndex, midpointIndex + 2);
+  const DATA1 = DATASET.slice(midpointIndex - mod3, midpointIndex + (3- mod3));
   const quadratic =
     DATA.length > 0
       ? quadInterpolant({
-          x0: DATA[0][0],
-          x1: DATA[1][0],
-          x2: DATA[2][0],
-          y0: DATA[0][1],
-          y1: DATA[1][1],
-          y2: DATA[2][1],
-        })
+        x0: DATA1[0][0],
+        x1: DATA1[1][0],
+        x2: DATA1[2][0],
+        y0: DATA1[0][1],
+        y1: DATA1[1][1],
+        y2: DATA1[2][1],
+      })
       : null;
   const linear =
     DATA.length > 0
